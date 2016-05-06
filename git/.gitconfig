@@ -1,0 +1,8 @@
+[user]
+	name = Saskia Hiltemann
+	email = zazkia@gmail.com
+	signingkey = 0BFB5253
+[commit]
+	gpgsign = true
+[push]
+	default= current

@@ -1,0 +1,41 @@
+### aliases
+alias untar='tar -xvzf'
+
+## Enable thefuck (https://github.com/nvbn/thefuck) 
+# (to install thefuck: sudo -H pip install thefuck)
+eval "$(thefuck --alias)"
+
+### Docker
+function docker-clean-images(){
+	docker rmi $(docker images -q)
+}
+
+function docker-clean-containers(){
+	docker rm $(docker ps -a -q)
+}
+
+function docker-clean-all(){
+	docker rm $(docker ps -a -q)
+	docker rmi $(docker images -q)
+}
+
+### Misc
+
+function set-brightness(){
+	if [ "$#" -ne 1 ]; then
+		 echo "usage: $0 <value (0-1)>"
+		 exit
+	fi
+	disp=$(xrandr -q | grep " connected"| cut -d" " -f1)
+	xrandr --output $disp --brightness $1
+}
+
+
+### silliness
+if [ -x /usr/games/cowsay -a -x /usr/games/fortune -a -x /usr/games/lolcat ]; then
+    fortune | cowsay | lolcat
+fi
+
+if [ -x /usr/games/lolcat ]; then
+	alias cat='lolcat'
+fi
