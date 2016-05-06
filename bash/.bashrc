@@ -118,5 +118,6 @@ fi
 
 
 ## load my custom aliases and functions
-source ~/.shell-custom
-
+if [ -f ~/.shell-custom ]; then
+    source ~/.shell-custom
+fi
