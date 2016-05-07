@@ -1,5 +1,6 @@
 ### aliases
 alias untar='tar -xvzf'
+alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 ## Enable thefuck (https://github.com/nvbn/thefuck) 
 # (to install thefuck: sudo -H pip install thefuck)
