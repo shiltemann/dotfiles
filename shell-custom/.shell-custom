@@ -3,7 +3,10 @@ alias untar='tar -xvzf'
 
 ## Enable thefuck (https://github.com/nvbn/thefuck) 
 # (to install thefuck: sudo -H pip install thefuck)
-eval "$(thefuck --alias)"
+if [ -x /usr/local/bin/thefuck ] 
+then
+    eval "$(thefuck --alias)"
+fi
 
 ### Docker
 function docker-clean-images(){
