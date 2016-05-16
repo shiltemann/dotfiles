@@ -1,13 +1,6 @@
 ### aliases
 alias untar='tar -xvzf'
 
-## Enable thefuck (https://github.com/nvbn/thefuck) 
-# (to install thefuck: sudo -H pip install thefuck)
-if [ -x /usr/local/bin/thefuck ] 
-then
-    eval "$(thefuck --alias)"
-fi
-
 ### Docker
 function docker-clean-images(){
 	docker rmi $(docker images -q)
@@ -35,6 +28,7 @@ function set-brightness(){
 
 
 ### silliness
+
 if [ -x /usr/games/cowsay -a -x /usr/games/fortune -a -x /usr/games/lolcat ]; then
     fortune | cowsay | lolcat
 fi
@@ -42,3 +36,17 @@ fi
 if [ -x /usr/games/lolcat ]; then
 	alias cat='lolcat'
 fi
+
+# Enable thefuck (https://github.com/nvbn/thefuck) (to install thefuck: sudo -H pip install thefuck)
+DOW=$(date +%u)
+if [ -x /usr/local/bin/thefuck ] 
+then
+    if [[ $DOW -eq 2 ]]
+    then
+        # monday alias
+        eval "$(thefuck --alias FUCK)"
+    else
+        eval "$(thefuck --alias)"
+    fi
+fi 
+
