@@ -1,10 +1,27 @@
 "*":
   core:
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
+    packagesWithKeymapsDisabled: [
+      "gfm-pdf"
     ]
+    themes: [
+      "atom-dark-ui"
+      "firewatch-syntax"
+    ]
+  editor:
+    fontSize: 12
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabLength: 4
   "exception-reporting":
-    userId: "f6093712-d96c-038e-96d5-0e80647fec8f"
+    userId: "8ea9c2df-dd11-d8ea-6d5d-a7a3b8200bde"
+  "pdf-view": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   welcome:
     showOnStartup: false
