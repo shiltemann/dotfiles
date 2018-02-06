@@ -72,3 +72,6 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+# Ubuntu make installation of Ubuntu Make binary symlink
+PATH=/home/saskia/.local/share/umake/bin:$PATH
+
