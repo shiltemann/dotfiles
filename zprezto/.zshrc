@@ -12,6 +12,10 @@ fi
 
 # Customize to your needs...
 
+# syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_STYLES[cursor]='bg=grey,fg=black'
+
 ## load my custom aliases and functions
 if [ -f ~/.shell-custom ]; then
     source ~/.shell-custom
