@@ -1,3 +1,6 @@
+### for GPG  pinentry-tty
+export GPG_TTY=$(tty)
+
 ### aliases
 alias untar='tar -xvzf'
 
