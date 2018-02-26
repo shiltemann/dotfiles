@@ -1,5 +1,7 @@
 ### general
 export PATH=$PATH:/home/saskia/.local/bin/
+/usr/bin/keychain $HOME/.ssh/id_rsa
+export GPG_TTY=$(tty)
 
 ### aliases
 alias untar='tar -xvzf'
@@ -42,7 +44,7 @@ fi
 
 # Enable thefuck (https://github.com/nvbn/thefuck) (to install thefuck: sudo -H pip install thefuck)
 DOW=$(date +%u)
-if [ -x /usr/local/bin/thefuck ] 
+if [ -x /usr/local/bin/thefuck ]
 then
     if [[ $DOW -eq 2 ]]
     then
@@ -51,5 +53,4 @@ then
     else
         eval "$(thefuck --alias)"
     fi
-fi 
-
+fi
