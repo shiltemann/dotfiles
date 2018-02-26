@@ -1,7 +1,12 @@
 ### general
 export PATH=$PATH:/home/saskia/.local/bin/
 /usr/bin/keychain $HOME/.ssh/id_rsa
+
+# for pinentry-tty
 export GPG_TTY=$(tty)
+
+# always start tmux
+[[ $TERM != "screen" ]] && exec tmux
 
 ### aliases
 alias untar='tar -xvzf'
