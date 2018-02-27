@@ -5,9 +5,6 @@ export PATH=$PATH:/home/saskia/.local/bin/
 # for pinentry-tty
 export GPG_TTY=$(tty)
 
-# always start tmux
-[[ $TERM != "screen" ]] && exec tmux
-
 ### aliases
 alias untar='tar -xvzf'
 
