@@ -1,9 +1,19 @@
 ### general
 export PATH=$PATH:/home/saskia/.local/bin/
-/usr/bin/keychain $HOME/.ssh/id_rsa
 
 # for pinentry-tty
 export GPG_TTY=$(tty)
+
+# Start the gpg-agent if not already running
+if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
+  gpg-connect-agent /bye >/dev/null 2>&1
+fi
+
+# Let  re-use ssh-agent and/or gpg-agent between logins
+export HOSTNAME=`hostname`
+/usr/bin/keychain --agents ssh,gpg $HOME/.ssh/id_rsa 0BFB5253
+source $HOME/.keychain/$HOSTNAME-sh
+source $HOME/.keychain/$HOSTNAME-sh-gpg
 
 ### aliases
 alias untar='tar -xvzf'
