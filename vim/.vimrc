@@ -7,6 +7,8 @@ color afterglow
 "color benokai
 
 set mouse=a
+set number
+set linebreak nolist
 
 " nerdtree settings  https://github.com/scrooloose/nerdtree
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
