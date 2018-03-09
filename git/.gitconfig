@@ -26,3 +26,4 @@
 	tool = vimdiff
 [core]
 	whitespace = trailing-space,space-before-tab,tab-in-indent
+	editor = vim
