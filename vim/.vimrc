@@ -10,6 +10,24 @@ set mouse=a
 set number
 set linebreak nolist
 
+
+" set tabs to be 4 spaces wide
+set tabstop=4
+set shiftwidth=4
+
+" use 4 spaces when hitting tab key
+"set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" strip trailing whitespace upon save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+
 " nerdtree settings  https://github.com/scrooloose/nerdtree
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 " for git flags support: git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdtree-git-plugin
