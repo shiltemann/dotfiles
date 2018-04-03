@@ -9,7 +9,10 @@ color afterglow
 set mouse=a
 set number
 set linebreak nolist
+"set guioptions=aA
 
+" copy
+vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 
 " set tabs to be 4 spaces wide
 set tabstop=4
