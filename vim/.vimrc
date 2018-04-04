@@ -21,6 +21,10 @@ set shiftwidth=4
 " use 4 spaces when hitting tab key
 "set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" whitespace characters for :set list
+set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:.
+set list
+
 " strip trailing whitespace upon save
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
@@ -29,6 +33,10 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" indent guide: git clone  git@github.com:Yggdroot/indentLine.git ~/.vim/bundle/indentLine
+let g:indentLine_color_term = 239
+let g:indentLine_char = '⎸'
 
 
 " nerdtree settings  https://github.com/scrooloose/nerdtree
