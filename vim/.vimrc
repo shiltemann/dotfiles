@@ -22,7 +22,7 @@ set shiftwidth=4
 "set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " whitespace characters for :set list
-set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:.
+set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:‧
 set list
 
 " strip trailing whitespace upon save
