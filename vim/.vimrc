@@ -9,7 +9,7 @@ color afterglow
 set mouse=a
 set number
 set linebreak nolist
-"set guioptions=aA
+set guioptions=aA
 
 " copy
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
@@ -23,7 +23,25 @@ set shiftwidth=4
 
 " whitespace characters for :set list
 set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:‧
-set list
+"set list
+
+" yank to system clipboard by default (make sure enabled: vim --version | grep clipboard. install vim-gtk or vim-gnome if not)
+set clipboard=unnamedplus
+
+
+" cursor movement along wrapped lines
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+
 
 " strip trailing whitespace upon save
 fun! <SID>StripTrailingWhitespaces()
