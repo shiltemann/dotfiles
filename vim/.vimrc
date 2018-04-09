@@ -11,6 +11,7 @@ set number
 set linebreak nolist
 set guioptions=aA
 
+
 " copy
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 
@@ -55,7 +56,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " indent guide: git clone  git@github.com:Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_char = '⎸'
-
+let g:indentLine_conceallevel = 0
 
 " nerdtree settings  https://github.com/scrooloose/nerdtree
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
@@ -65,3 +66,10 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
+
+
+" do not render markdown/latex formatting
+if has ( 'conceal' )
+  set conceallevel=0
+  let g:tex_conceal = ""
+endif
