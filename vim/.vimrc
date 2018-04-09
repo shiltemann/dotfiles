@@ -56,7 +56,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " indent guide: git clone  git@github.com:Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_char = '⎸'
-let g:indentLine_conceallevel = 0
+autocmd FileType markdown let g:indentLine_conceallevel = 0
 
 " nerdtree settings  https://github.com/scrooloose/nerdtree
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
