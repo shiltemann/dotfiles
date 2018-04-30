@@ -7,3 +7,6 @@
 [submodule "vim/.vim/bundle/nerdtree-git-plugin"]
 	path = vim/.vim/bundle/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "zprezto/.zprezto"]
+	path = zprezto/.zprezto
+	url = git@github.com:sorin-ionescu/prezto.git
