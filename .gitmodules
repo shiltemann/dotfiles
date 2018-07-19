@@ -13,3 +13,9 @@
 [submodule "vim/.vim/bundle/vim-flake8"]
 	path = vim/.vim/bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.tmux/plugins/tmux-yank"]
+	path = tmux/.tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
