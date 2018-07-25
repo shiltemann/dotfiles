@@ -104,3 +104,9 @@ set statusline+=%=			" separator from left to right justified
 set statusline+=\ %{WordCount()}\ words,
 set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
+
+" vim-flake8 configuration
+" https://github.com/nvie/vim-flake8
+autocmd BufWritePost *.py call Flake8()
+
+let g:flake8_show_in_gutter=1

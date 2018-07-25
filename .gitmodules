@@ -7,3 +7,15 @@
 [submodule "vim/.vim/bundle/nerdtree-git-plugin"]
 	path = vim/.vim/bundle/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "zprezto/.zprezto"]
+	path = zprezto/.zprezto
+	url = git@github.com:sorin-ionescu/prezto.git
+[submodule "vim/.vim/bundle/vim-flake8"]
+	path = vim/.vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.tmux/plugins/tmux-yank"]
+	path = tmux/.tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
