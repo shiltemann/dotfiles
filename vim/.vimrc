@@ -42,7 +42,9 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-
+" indent/unindent visually selected lines with TAB/SHIFT+TAB
+vmap <TAB> >gv
+vmap <S-TAB> <gv
 
 " strip trailing whitespace upon save
 fun! <SID>StripTrailingWhitespaces()
