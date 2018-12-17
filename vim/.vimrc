@@ -22,8 +22,11 @@ set shiftwidth=4
 " use 4 spaces when hitting tab key
 "set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-" whitespace characters for :set list
-set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:‧
+if has("patch-7.4.710")
+    set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<,space:‧
+else
+    set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<
+endif
 "set list
 
 " yank to system clipboard by default (make sure enabled: vim --version | grep clipboard. install vim-gtk or vim-gnome if not)
