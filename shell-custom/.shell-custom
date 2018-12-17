@@ -10,10 +10,13 @@ if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
 fi
 
 # Let  re-use ssh-agent and/or gpg-agent between logins
-export HOSTNAME=`hostname`
-/usr/bin/keychain --agents ssh,gpg $HOME/.ssh/id_rsa 0BFB5253
-source $HOME/.keychain/$HOSTNAME-sh
-source $HOME/.keychain/$HOSTNAME-sh-gpg
+if [ -f /usr/bin/keychain ]
+then
+  export HOSTNAME=`hostname`
+  /usr/bin/keychain --agents ssh,gpg $HOME/.ssh/id_rsa 0BFB5253
+  source $HOME/.keychain/$HOSTNAME-sh
+  source $HOME/.keychain/$HOSTNAME-sh-gpg
+fi
 
 ### aliases
 alias untar='tar -xvzf'
