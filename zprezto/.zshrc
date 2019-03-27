@@ -20,5 +20,6 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bg=grey,fg=black'
 if [ -f ~/.shell-custom ]; then
     source ~/.shell-custom
 fi
+
 export EDITOR=/usr/bin/vim.gtk
 export VISUAL=/usr/bin/vim.gtk
