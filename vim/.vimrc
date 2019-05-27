@@ -113,6 +113,17 @@ set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " vim-flake8 configuration
 " https://github.com/nvie/vim-flake8
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
-let g:flake8_show_in_gutter=1
+"let g:flake8_show_in_gutter=1
+
+
+" vim-syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
