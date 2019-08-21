@@ -2,4 +2,6 @@
 gnupg/.gnupg/pubring.kbx*
 gnupg/.gnupg/trustdb.gpg
 gnupg/.gnupg/private-keys*
+firefox/.mozilla/firefox/lovnx8gn.personal/*
+firefox/.mozilla/firefox/h867erp7.work/*
 *.swp
