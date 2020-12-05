@@ -2,7 +2,7 @@
 copy custom prompt file into zprezto submodule:
 
 ```bash
-$ cp prompt_zazzie_setup .zprezto/modules/prompt/functions/
+cp prompt_zazzie_setup ~/.zprezto/modules/prompt/functions/
 ```
 
 ## submodule

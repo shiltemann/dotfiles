@@ -1,3 +1,10 @@
+contains some custom css for treestyle tab, to enable, set following
+via `about:config` in firefox
+
+```
+toolkit.legacyUserProfileCustomizations.stylesheets = true
+```
+
 # Firefox profiles
 
 - run `funfox` to start personal session
