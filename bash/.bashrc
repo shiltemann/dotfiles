@@ -123,3 +123,12 @@ fi
 if [ -f ~/.shell-custom ]; then
     source ~/.shell-custom
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source ~/.rvm/scripts/rvm
+
+# add the custom scripts from this repo to the PATH
+export PATH="$PATH:$HOME/.scripts/"
+
+echo "done."

@@ -23,3 +23,6 @@ fi
 
 export EDITOR=/usr/bin/vim.gtk
 export VISUAL=/usr/bin/vim.gtk
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
