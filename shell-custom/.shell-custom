@@ -21,6 +21,8 @@ fi
 ### aliases
 alias untar='tar -xvzf'
 alias copy='xclip -sel clip'
+alias open='xdg-open'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 
 ### Docker
